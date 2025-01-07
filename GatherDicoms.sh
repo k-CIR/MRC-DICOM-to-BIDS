@@ -13,7 +13,8 @@ if [ ! -f "$subs_file" ]; then
 fi
 
 # Path to copy data to
-moved_dir="/data/capsi/dicoms"
+moved_dir="./data/dicoms"
+mkdir -p "$moved_dir"
 
 # Skip the header row of the CSV and process each subject
 tail -n +2 "$subs_file" | while IFS=',' read -r subject mrcid1 mrcid2 mrcid3 || [ -n "$subject" ]; do
