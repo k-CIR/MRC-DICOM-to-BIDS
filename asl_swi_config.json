@@ -1,0 +1,38 @@
+{
+    "descriptions": [
+        {
+            "datatype": "perf",
+            "suffix": "ASL",
+            "custom_entities": "acq-CASL",
+            "criteria": {
+                "SeriesDescription": "ASL",
+                "ArterialSpinLabelingType": "CASL"
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "ASL",
+            "custom_entities": "acq-PCASL",
+            "criteria": {
+                "SeriesDescription": "ASL",
+                "ArterialSpinLabelingType": "PCASL"
+            }
+        },
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-mag",
+            "criteria": {
+                "SeriesDescription": "SWI:SWI 3DEPI HR"
+            }
+        },
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-phase",
+            "criteria": {
+                "SeriesDescription": "SWIphase:SWI 3DEPI HR"
+            }
+        }
+    ]
+}

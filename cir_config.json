@@ -1,0 +1,85 @@
+{
+    "descriptions": [
+        {
+            "datatype": "anat",
+            "suffix": "T1w",
+            "criteria": {
+                "SeriesDescription": "Sag_T1_MPRAGE"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "FLAIR",
+            "criteria": {
+                "SeriesDescription": "Sag_T2_FLAIR"
+            }
+        },
+        {
+            "datatype": "func",
+            "suffix": "bold",
+            "custom_entities": "acq-fmap",
+            "custom_entities": "task-fmap",
+            "criteria": {
+                "SeriesDescription": "fmap_fmri"
+            },
+            "sidecar_changes": {
+              "TaskName": "fmap"
+            }
+        },
+        {
+            "datatype": "func",
+            "suffix": "bold",
+            "custom_entities": "task-rseo",
+            "criteria": {
+                "SeriesDescription": "fmri_Rest_eyes_OPEN_te28"
+            },
+            "sidecar_changes": {
+              "TaskName": "rseo"
+            }
+        },
+        {
+            "datatype": "func",
+            "suffix": "bold",
+            "custom_entities": "task-seldem",
+            "criteria": {
+                "SeriesDescription": "fmri1_learning"
+              },
+              "sidecar_changes": {
+                "TaskName": "seldem"
+              }
+        },
+        {
+            "datatype": "func",
+            "suffix": "bold",
+            "custom_entities": "task-selexp",
+            "criteria": {
+                "SeriesDescription": "fmri2_directStim"
+              },
+              "sidecar_changes": {
+                "TaskName": "selexp"
+              }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "T2w",
+            "criteria": {
+                "SeriesDescription": "Sag_T2_te90"
+            }
+        },
+        {
+            "datatype": "dwi",
+            "suffix": "dwi",
+            "custom_entities": "acq-fmap",
+            "criteria": {
+                "SeriesDescription": "fmap_DTI"
+            }
+        },
+        {
+            "datatype": "dwi",
+            "suffix": "dwi",
+            "criteria": {
+                "SeriesDescription": "DTI_b1300-2600"
+            }
+        }
+    ]
+}
