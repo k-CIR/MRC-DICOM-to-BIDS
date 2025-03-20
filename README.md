@@ -41,13 +41,13 @@ Run this shell-script to gather dicoms for IDs specified in _subject_template.cs
 The file you are reading right now.
 
 ### RunDcm2bids.sh
-Run this shell-script after *GatherDicoms.sh" to convert all DICOM-files to nifti using [dcm2bids](https://unfmontreal.github.io/Dcm2Bids/3.2.0/). Require a config file that specify what criteria are required for a MR-sequencesto be identified and how to rename it. This scrit run dcm2bids twice to convert the CIR-protocol sequences and ASL and SWI sequences separately.
+Run this shell-script after "GatherDicoms.sh" to convert all DICOM-files to nifti using [dcm2bids](https://unfmontreal.github.io/Dcm2Bids/3.2.0/). Requires a config file that specify what criteria are required for a MR-sequencesto be identified and how to rename it. This script run dcm2bids twice to convert the CIR-protocol sequences and ASL and SWI sequences separately.
 
 ### asl_swi_config.json
 The config file to match ASL and SWI sequences and how to rename them.
 
 ### cir_config.json
-The config file to match all other sequences in the CIR-protocol.
+The config file to match all other sequences in the [CIR-protocol](https://k-cir.github.io/cir-wiki/mrc/mrc-cir-protocol/).
 
 ### subject_template.csv
 A CSV file that contain random, nonsense IDs but can be used as a template for your study. The first column "subject" are specified by you - it is recommended to use a three integer number (001-999) for BIDS. The mrcid1, mrcid2 and mrcid3 are generated during scanning and should be noted at the time. This script is designed to use with up to three sessions but also work with fewer sessions. If you only scan each subject once - only use the second column "mrcid1" and leave the others blank.
