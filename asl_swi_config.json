@@ -2,20 +2,21 @@
     "descriptions": [
         {
             "datatype": "perf",
-            "suffix": "ASL",
-            "custom_entities": "acq-CASL",
+            "suffix": "m0scan",
             "criteria": {
                 "SeriesDescription": "ASL",
-                "ArterialSpinLabelingType": "CASL"
+                "ImageType": ["ORIGINAL", "PRIMARY", "ASL"]
             }
         },
         {
             "datatype": "perf",
-            "suffix": "ASL",
-            "custom_entities": "acq-PCASL",
+            "suffix": "asl",
             "criteria": {
                 "SeriesDescription": "ASL",
-                "ArterialSpinLabelingType": "PCASL"
+                "ImageType": ["DERIVED", "PRIMARY", "ASL", "PERFUSION", "ASL"]
+            },
+            "sidecar_changes": {
+                "M0Type": "Seperate"
             }
         },
         {
