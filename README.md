@@ -32,6 +32,9 @@ subject | session
 003 | 01 
 003 | 02 
 
+## The config file
+See [dcm2bids documentation](https://unfmontreal.github.io/Dcm2Bids/3.1.1/how-to/create-config-file/).
+
 ## File description
 
 ### .gitignore
@@ -46,10 +49,10 @@ Convert all DICOM-files to nifti using [dcm2bids](https://unfmontreal.github.io/
 Run as: ``bash ./RunDcm2bids.sh`` to run all subjects and sessions in the CSV or as ``bash ./RunDcm2bids.sh 2`` to run the first 2 (or any other number) of lines in your CSV.
 
 ### swi_config.json
-The config file to match SWI sequences and how to rename them.
+Specify how to match SWI sequences and how to rename them.
 
 ### cir_config.json
-The config file to match all other sequences in the [CIR-protocol](https://k-cir.github.io/cir-wiki/mrc/mrc-cir-protocol/).
+The config file to match all other sequences in the [CIR-protocol](https://k-cir.github.io/cir-wiki/mrc/mrc-cir-protocol/) and rename them.
 
 ### subject_template.csv
-A CSV file that contain random, nonsense IDs but can be used as a template for your study. The first column "subject" are specified by you - it is recommended to use a three integer number (001-999) for BIDS. The mrcid1, mrcid2 and mrcid3 are generated during scanning and should be noted at the time. This script is designed to use with up to three sessions but also work with fewer sessions. If you only scan each subject once - only use the second column "mrcid1" and leave the others blank.
+A CSV file that contain made up IDs but can be used as a template. It is recommended to use a three integer number (001-999) for BIDS subject.
