@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script runs dcm2bids twice. Once to convert to proper BIDS and once to convert SWI sequences, using separate config file, to pseudo-BIDS in derivatives.
-csv_file="/data/users/nikedv/gather-cir-data/sub_info/completed_mri_sessions_long_DATA_2025-06-18.csv"
+csv_file="subject_template.csv"
 
 # Config file for BIDS
 config_file="cir_config.json"
@@ -9,16 +9,16 @@ config_file="cir_config.json"
 config_other="swi_config.json"
 
 # Output directory for BIDS
-outputdir="/data/projects/capsi/BIDS/"
-# Output directory for derivatives
-outputdir_der="/data/projects/capsi/BIDS/derivatives/"
+outputdir="./data"
+# Output directory for derivatives (based on outputdir)
+outputdir_der="${outputdir}/derivatives"
 
 # Create output folders if they don't already exist
 mkdir -p "$outputdir"
 mkdir -p "$outputdir_der"
 
 # Specify the path to where subjects are gathered
-subject_folder_base="/data/projects/capsi/raw/mri/"
+subject_folder_base="/data/projects/yourproject/raw/mri/"
 
 # Export variables to make them available for "parallel"
 export outputdir outputdir_der config_file config_other subject_folder_base
