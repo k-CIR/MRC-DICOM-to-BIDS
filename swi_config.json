@@ -1,0 +1,20 @@
+{
+    "descriptions": [
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-mag",
+            "criteria": {
+                "SeriesDescription": "SWI:SWI 3DEPI HR"
+            }
+        },
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-phase",
+            "criteria": {
+                "SeriesDescription": "SWIphase:SWI 3DEPI HR"
+            }
+        }
+    ]
+}

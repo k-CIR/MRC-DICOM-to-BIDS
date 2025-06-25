@@ -17,47 +17,55 @@
         {
             "datatype": "func",
             "suffix": "bold",
-            "custom_entities": "acq-fmap",
-            "custom_entities": "task-fmap",
+            "custom_entities": [
+                "acq-fmap",
+                "task-fmap"
+            ],
             "criteria": {
                 "SeriesDescription": "fmap_fmri"
             },
             "sidecar_changes": {
-              "TaskName": "fmap"
+                "TaskName": "fmap"
             }
         },
         {
             "datatype": "func",
             "suffix": "bold",
-            "custom_entities": "task-rseo",
+            "custom_entities": [
+                "task-rseo"
+            ],
             "criteria": {
                 "SeriesDescription": "fmri_Rest_eyes_OPEN_te28"
             },
             "sidecar_changes": {
-              "TaskName": "rseo"
+                "TaskName": "rseo"
             }
         },
         {
             "datatype": "func",
             "suffix": "bold",
-            "custom_entities": "task-seldem",
+            "custom_entities": [
+                "task-seldem"
+            ],
             "criteria": {
                 "SeriesDescription": "fmri1_learning"
-              },
-              "sidecar_changes": {
+            },
+            "sidecar_changes": {
                 "TaskName": "seldem"
-              }
+            }
         },
         {
             "datatype": "func",
             "suffix": "bold",
-            "custom_entities": "task-selexp",
+            "custom_entities": [
+                "task-selexp"
+            ],
             "criteria": {
                 "SeriesDescription": "fmri2_directStim"
-              },
-              "sidecar_changes": {
+            },
+            "sidecar_changes": {
                 "TaskName": "selexp"
-              }
+            }
         },
         {
             "datatype": "anat",
@@ -69,7 +77,9 @@
         {
             "datatype": "dwi",
             "suffix": "dwi",
-            "custom_entities": "acq-fmap",
+            "custom_entities": [
+                "acq-fmap"
+            ],
             "criteria": {
                 "SeriesDescription": "fmap_DTI"
             }
@@ -79,6 +89,30 @@
             "suffix": "dwi",
             "criteria": {
                 "SeriesDescription": "DTI_b1300-2600"
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "m0scan",
+            "criteria": {
+                "SeriesDescription": "ASL",
+                "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "MAGNITUDE"]
+            },
+            "sidecar_changes": {
+                "IntendedFor": "id_asl"
+            }
+        },
+        {
+            "datatype": "perf",
+            "id": "id_asl",
+            "suffix": "asl",
+            "criteria": {
+                "SeriesDescription": "ASL",
+                "ImageType": ["DERIVED", "PRIMARY", "ASL", "PERFUSION", "ASL", "MAGNITUDE"]
+            },
+            "sidecar_changes": {
+                "M0Type": "Separate",
+                "TotalAcquiredPairs": null
             }
         }
     ]
