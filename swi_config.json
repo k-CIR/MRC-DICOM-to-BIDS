@@ -15,6 +15,22 @@
             "criteria": {
                 "SeriesDescription": "SWIphase:SWI 3DEPI HR"
             }
+        },
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-mag",
+            "criteria": {
+                "SeriesDescription": "SWI:Ax SWI 3DEPI"
+            }
+        },
+        {
+            "datatype": "swi",
+            "suffix": "swi",
+            "custom_entities": "part-phase",
+            "criteria": {
+                "SeriesDescription": "SWIphase:Ax SWI 3DEPI"
+            }
         }
     ]
 }
